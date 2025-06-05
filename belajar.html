@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>KENANGAN | 23 OKTOBER 2024</title>
+    <link rel="stylesheet" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="gambar/gambar 1.jpeg">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <img src="gambar/gambar 1.jpeg" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#content">Foto</a></li>
+            </ul>
+            <div class="status-bar">
+                <p>Online</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="login-section">
+        <div class="login-card">
+            <h2>Login untuk melihat kenangan</h2>
+            <form onsubmit="return loginUser(event)">
+                <input type="text" id="username" placeholder="Valen Kurnia Mendrofa" required>
+                <input type="password" id="password" placeholder="23 OKTOBER 2025" required>
+                <button type="submit">Masuk</button>
+            </form>
+        </div>
+    </section>
+
+    <main id="main-content" style="display: none;">
+        <section id="home" class="hero">
+            <img src="gambar/foto 1.jpeg" class="cover-image">
+        </section>
+
+        <section id="about" class="card">
+            <h2>Tentang Halaman Ini</h2>
+            <p>Ini adalah galeri kenangan dari tanggal 23 Oktober 2024. Dibuat oleh Valen Mendrofa.</p>
+        </section>
+
+        <section id="content">
+            <article id="Kenangan1" class="card">
+                <h2>Kenangan 1</h2>
+                <img src="gambar/foto 3.jpeg" class="featured-image" alt="Kenangan1">
+                <img src="gambar/fotobila.jpeg" class="featured-image" alt="Kenangan1">
+                <p>Foto pertama berdua dan foto random Bila.</p>
+            </article>
+
+            <article id="Kenangan2" class="card">
+                <h2>Kenangan 2</h2>
+                <img src="gambar/foto.jpeg" class="featured-image" alt="Kenangan2">
+                <img src="gambar/foto10.jpeg" class="featured-image" alt="Kenangan2">
+                <p>Ulang tahun Nabila dan foto random Valen.</p>
+            </article>
+
+            <article id="Kenangan3" class="card">
+                <h2>Kenangan 3</h2>
+                <img src="gambar/foto5..jpeg" class="featured-image" alt="Kenangan3">
+                <img src="gambar/fotovalen.jpeg" class="featured-image" alt="Kenangan3">
+                <p>Foto Nabila dan Valen.</p>
+            </article>
+
+            <article id="Kenangan4" class="card">
+                <h2>Kenangan 4</h2>
+                <img src="gambar/foto20.jpeg" class="featured-image" alt="Kenangan4">
+                <img src="gambar/foto5..jpeg" class="featured-image" alt="Kenangan4">
+                <p>Foto lainnya dari Nabila dan Valen.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with 💖 &copy; 2025. Valen Mendrofa Indonesia</p>
+    </footer>
+
+    <script>
+        function loginUser(event) {
+            event.preventDefault();
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            if (user === 'valen' && pass === 'kenangan2024') {
+                document.getElementById('login-section').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            } else {
+                alert('Login gagal! Coba lagi.');
+            }
+        }
+    </script>
+</body>
+</html>
